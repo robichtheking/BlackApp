@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <title>Blackjack PWA — Wong Halves + I18</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0b1220">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header>
+      <h1>Blackjack Assistant</h1>
+      <small>Wong Halves + Illustrious 18 (S17). Tap cards → Decide.</small>
+    </header>
+
+    <section class="counts">
+      <div>Running Count: <span id="rcount">0.0</span></div>
+      <div>Decks Remaining: <input id="decks" type="number" min="0.5" step="0.5" value="6" /></div>
+      <div>True Count: <span id="tcount">0.0</span></div>
+    </section>
+
+    <section class="board">
+      <div class="hand">
+        <h2>Player</h2>
+        <div id="player-cards" class="card-row"></div>
+        <div class="small">tap to add card — max 2 initially (can add extras)</div>
+      </div>
+
+      <div class="hand">
+        <h2>Dealer</h2>
+        <div id="dealer-cards" class="card-row"></div>
+        <div class="small">tap to set dealer upcard</div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div class="card-palette" id="palette"></div>
+
+      <div class="cmds">
+        <input id="manual" placeholder='Type: "8,7,6" or "| 2,K,A" or "reset" or "set decks=6"' />
+        <button id="parseBtn">Parse Input</button>
+        <button id="decideBtn" class="primary">Decide</button>
+        <button id="resetBtn">Reset Count</button>
+      </div>
+    </section>
+
+    <section class="result">
+      <div id="resultWord" class="big-word" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <small>Outputs only: Hit / Stand / Double / Split</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
