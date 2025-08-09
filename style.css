@@ -1,0 +1,25 @@
+:root{
+  --bg:#0b1220; --card:#ffffff; --muted:#9aa4b2; --accent:#1db954;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--card);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+#app{max-width:820px;margin:12px auto;padding:14px}
+header h1{margin:0;font-size:20px}
+header small{color:var(--muted)}
+.counts{display:flex;gap:12px;align-items:center;margin:12px 0}
+.counts input{width:70px;padding:6px;border-radius:6px;border:0}
+.board{display:flex;gap:12px;flex-wrap:wrap}
+.hand{flex:1;background:rgba(255,255,255,0.03);padding:10px;border-radius:10px}
+.card-row{display:flex;gap:8px;flex-wrap:wrap;padding:8px 0}
+.card{width:56px;height:80px;border-radius:8px;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;cursor:pointer;user-select:none}
+.card.small{width:42px;height:60px;font-size:14px}
+.controls{margin-top:14px;display:grid;grid-template-columns:1fr 280px;gap:12px;align-items:start}
+.card-palette{display:flex;flex-wrap:wrap;gap:8px}
+.cmds{display:flex;flex-direction:column;gap:8px}
+.cmds input{padding:8px;border-radius:8px;border:0}
+.cmds button{padding:10px;border-radius:8px;border:0;background:rgba(255,255,255,0.06);color:var(--card);cursor:pointer}
+.cmds button.primary{background:var(--accent);color:#fff}
+.result{margin-top:14px;display:flex;align-items:center;justify-content:center}
+.big-word{font-size:48px;font-weight:800;color:var(--accent);min-height:56px}
+footer{margin-top:12px;color:var(--muted)}
+.small{color:var(--muted);font-size:12px;margin-top:6px}
